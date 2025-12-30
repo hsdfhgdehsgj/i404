@@ -3,52 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>my experence</title>
+    <title>My resume</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <script>
-        function calculateBMI() {
-            let height = document.getElementById("height").value;
-            let weight = document.getElementById("weight").value;
+   <script>
+function calculateGPA() {
+    let score = document.getElementById("score").value;
 
-            if (height === "" || weight === "") {
-                alert("請輸入身高和體重！");
-                return;
-            }
+    if (score === "") {
+        alert("請輸入學期平均成績！");
+        return;
+    }
 
-            // 身高轉成公尺
-            height = height / 100;
+    score = parseFloat(score);
+    let gpa = (score / 100) * 4;
 
-            let bmi = weight / (height * height);
-            bmi = bmi.toFixed(2);
-
-            let result = "";
-
-            if (bmi < 18.5) {
-                result = "體重過輕";
-            } else if (bmi < 24) {
-                result = "正常範圍";
-            } else if (bmi < 27) {
-                result = "過重";
-            } else {
-                result = "肥胖";
-            }
-
-            alert("你的 BMI 是：" + bmi + "\n判定結果：" + result);
-        }
-    </script>
+    alert("你的 GPA（4.0 制）為：" + gpa.toFixed(2));
+}
+</script>
     
   
   </head>
   <body>
     
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
 
-        <a class="navbar-brand" href="page1.html">
-          <img src="photo/profile1.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          關於我
+        <a class="navbar-brand" href="index4.html">
+          <img src="images/man.jpg" class="img-fluid rounded-circle mx-auto d-block shadow" alt="photo MISS">
+          照片
         </a>          
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +41,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="page2.html">證照</a>
+                <a class="nav-link active" aria-current="page" href="page2.html">我的證書</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">經歷</a>
+                <a class="nav-link" href="page1.html">未來出路</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">志工服務</a>
+                <a class="nav-link" href="test.html">實習經驗</a>
               </li>
 
             </ul>
@@ -84,27 +68,27 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="photo/profile2.jpg" class="d-block w-100" alt="firs page">
+            <img src="images/photo1.png" class="d-block w-100"  style="height: 450px; object-fit: cover;" alt="photo miss">
             <div class="carousel-caption d-none d-md-block">
-              <h5>我的校園</h5>
-              <p>就是我的校園</p>
+              <h5>我的學校</h5>
+              <p>實踐大學高雄校區</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="photo/profile3.jpg" class="d-block w-100" alt="the second photo">
-            <div class="carousel-caption d-none d-md-block"> 
-              <h5>參加SDGS講座</h5>
-               <p>SDGS講座</p>
-            
-           <div class="carousel-item">
-            <img src="photo/profile4.jpg" class="d-block w-100" alt="...">
+            <img src="images/tqc.jpg" class="d-block w-100" style="height: 450px; object-fit: cover;" alt="photo miss">
             <div class="carousel-caption d-none d-md-block">
-              <h5>英語檢定</h5>
-              <p>這是我參加過的英語檢定.</p>
+              <h5>我參加過的檢定</h5>
+              <p>tqc+ 證照.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/job.jpg" class="d-block mx-auto img-fluid" style="max-height: 400px; object-fit: contain;" alt="photo miss">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>我希望的工作</h5>
+              <p>網頁設計師</p>
             </div>
           </div>
         </div>
-
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -113,57 +97,82 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      button
+      </div>
       
       
-      
+       <div class="row">
+ftyyuuuiiiooo
+         <hr/>
+         <div>
       
       
       <div class="row">
         <!-- commment -->
         
         <div class="col-sm-8">
-          <h1>我的經驗:</h1>
+          <h1>學歷與經歷:</h1>
           <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
+            <div class="accordion-body">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  系上淨灘
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  指導高中線迷宮鼠 (Line Maze) 
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+
+                      <div class="card w-100">
+                  <img src="images/game.jpg" class="card-img-top" alt="photo miss">
+                  <div class="card-body">
+                    <h5 class="card-title">相關介紹</h5>
+                    <p class="card-text">線迷宮鼠比賽 (Line Maze) </p>
+                    <a href="https://sites.google.com/gm.lhu.edu.tw/tmirc2025/Home/Line-maze" class="btn btn-primary">網站連結</a>
+                  </div>
+                </div>
+
+             
                 <div class="accordion-body">
-                  <strong>淨灘讓我更直接看見海洋污染的嚴重性。短時間內撿到大量垃圾，才意識到日常行為對環境的影響。這次經驗提醒我，環保不只是活動，而是需要從生活中持續實踐的責任。.</strong> 短短時間內就撿到大量垃圾，讓我反思日常生活中不經意造成的環境負擔，也更加明白保護環境需要從自身做起並長期堅持。<code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>我參與並指導高中生進行「線迷宮鼠（Line Maze Mouse）」比賽</strong> 我向學生說明比賽規則與評分方式，包括賽道設計、感測器判斷方式以及完成時間與穩定度的評比標準，確保學生對競賽目標有清楚認識。接著進行基礎教學，內容涵蓋電路組裝、感測器原理、馬達控制與基礎程式邏輯，並以實例說明循線與迷宮判斷的核心概念，幫助學生建立工程思維
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                 SDGS
+                  模擬聯合國（MUN）
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                
+                      <div class="card w-100">
+                  <img src="images/modd.jpg" class="card-img-top" alt="photo miss">
+                  <div class="card-body">
+                    <h5 class="card-title">相關介紹</h5>
+                    <p class="card-text">模擬聯合國（Model United Nations) </p>
+                    <a href="https://crossing.cw.com.tw/article/18702" class="btn btn-primary">網站連結</a>
+                  </div>
+                </div>
+                
                 <div class="accordion-body">
-                  <strong>jdgjnjidindfg.</strong>透過這次參加活動，我不僅加深對相關議題的理解，也意識到個人行動的重要性，未來會將所學落實在日常生活中，持續為改善環境與社會盡一份心力。 <code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>模擬聯合國是一項國際性學術活動，參與者扮演各國外交官，依照真實聯合國會議程序</strong> 參與模擬聯合國會議，擔任國家代表，負責議題研究、立場文件撰寫與會議辯論，並與多國代表協商完成決議草案
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  順利畢業
+                  擔任數位學習志工
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
 
-                    <div class="card" style="width: 18rem;">
-                      <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1SKKR2.img?w=268&h=140&q=60&m=6&f=jpg&x=821&y=224&u=t" class="card-img-top" alt="first iamge miss">
+                       <div class="card w-100">
+                      <img src="images/tree.jpg" class="card-img-top" alt="photo miss">
                       <div class="card-body">
-                        <h5 class="card-title">三角戀太精彩!孫淑媚《舊金山美容院》告白連晨翔 劉品言怒轟渣男</h5>
-                        <p class="card-text">TVBS原創戲劇《舊金山美容院》中美食競賽的劇情發展進入高潮，觀眾見證了連晨翔因對手操控比賽而被淘汰的戲劇性時刻。劇中章廣辰意外聽到廁所內關於比賽操控的對話，隨後發現對手暗中操作，進而借題發揮、暗中操作比賽結果。劇情高潮不僅在比賽黑幕揭露，更延伸至感情世界，當連晨翔與製作人孫淑媚因「碰到親10秒送肉活動」而被劉品言撞見，引發三人情感衝突，最終在孫淑媚的脫口秀中全面爆發。</p>
-                        <a href="https://reurl.cc/rKkEyy" class="btn btn-primary">connect</a>
+                        <h5 class="card-title">相關介紹</h5>
+                        <p class="card-text">擔任數位學習志工，負責線上教學與教材設計，協助學生熟悉數位工具並提升學習成效</p>
+                        <a href="https://itaiwan.moe.gov.tw/local_info.php?id=1780" class="btn btn-primary">網站連結</a>
                       </div>
                     </div>
                 
@@ -179,22 +188,20 @@
 
         
         <div class="col-sm-4">
-        <h1>BMI</h1>
+        <h1>GPA</h1>
             <div class="card shadow p-4">
-              <h2 class="text-center mb-4">BMI 計算器</h2>
+              <h2 class="text-center mb-4">GPA 計算器</h2>
       
               <div class="mb-3">
-                  <label class="form-label">身高（公分）</label>
-                  <input type="number" id="height" class="form-control" placeholder="例如：170">
+                  <label class="form-label">學期平均成績</label>
               </div>
       
               <div class="mb-3">
-                  <label class="form-label">體重（公斤）</label>
-                  <input type="number" id="weight" class="form-control" placeholder="例如：60">
+                  <input type="number" id="score" class="form-control" placeholder="例如：84.65">
               </div>
       
-              <button class="btn btn-primary w-100" onclick="calculateBMI()">
-                  計算 BMI
+              <button class="btn btn-primary w-100" onclick="calculateGPA()">
+                  計算 GPA
               </button>
           </div>
         
@@ -206,9 +213,10 @@
 
       
       <div class="row">
-        <div class="col-2 p-3 mb-2 bg-primary text-white ">年度冠軍</div>
-        <div class="col-8 p-3 mb-2 bg-secondary text-white">游泳冠軍</div>
-        <div class="col-2 p-3 mb-2 bg-success text-white">老虎牙子年度代言人</div>
+        <div class="col-3 p-3 mb-2 bg-primary text-white ">16+2即將上路?</div>
+        <div class="col-3 p-3 mb-2 bg-danger text-white ">山海同框日出超感動</div>
+        <div class="col-3 p-3 mb-2 bg-info text-white">讓殺人少年孝順死者父母？</div>
+        <div class="col-3 p-3 mb-2 bg-warning text-white">柯文哲遭求刑28年6月</div>
       </div>
     
 
@@ -217,51 +225,58 @@
           <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-primary text-white">
 
           <div class="card" style="width: 18rem;">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1SKKR2.img?w=268&h=140&q=60&m=6&f=jpg&x=821&y=224&u=t" class="card-img-top" alt="first iamge miss">
+            <img src="images/add.jpg" class="card-img-top" alt="iamge miss">
             <div class="card-body">
-              <h5 class="card-title">三角戀太精彩!孫淑媚《舊金山美容院》告白連晨翔 劉品言怒轟渣男</h5>
-              <p class="card-text">TVBS原創戲劇《舊金山美容院》中美食競賽的劇情發展進入高潮，觀眾見證了連晨翔因對手操控比賽而被淘汰的戲劇性時刻。劇中章廣辰意外聽到廁所內關於比賽操控的對話，隨後發現對手暗中操作，進而借題發揮、暗中操作比賽結果。劇情高潮不僅在比賽黑幕揭露，更延伸至感情世界，當連晨翔與製作人孫淑媚因「碰到親10秒送肉活動」而被劉品言撞見，引發三人情感衝突，最終在孫淑媚的脫口秀中全面爆發。</p>
-              <a href="https://reurl.cc/rKkEyy" class="btn btn-primary">connect</a>
+              <h5 class="card-title">高教變革「一學期16週新制」8月上路</h5>
+              <p class="card-text">台灣的大學教育長久以來都為每學期18週，學期之間則以寒假和暑假區隔。台大教務長丁詩同指出，《大學法》規定，1學分以18小時為原則，導致每學期均要排滿18週。此次教育部核准台大學則修訂，學期可望縮短至16周，近期台大系統會討論以16週長度為一學期的作法與配套，包括行事曆、課程調整規範、教師基本授課時數等，教育部應會同意。</p>
+              <a href="https://events.ettoday.net/depth-report/shorter-semesters/index.htm" class="btn btn-primary">查看詳情</a>
+          </div>
+      </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-danger text-white">
+  
+            <div class="card" style="width: 18rem;">
+              <img src="images/sun.jpg" class="card-img-top" alt="img miss">
+              <div class="card-body">
+                <h5 class="card-title">不用衝阿里山 中南部迎接最美曙光景點推薦</h5>
+                <p class="card-text">迎接新的一年，不一定要衝上阿里山才能看見最動人的曙光！中南部也有許多能把清晨感動放到滿分的觀日秘境，從能遠望層層山巒翻騰雲海的二寮觀日亭，到海天一線、光影柔美的七股海堤與旗津海岸；再到自然氛圍滿點的柴山、高美濕地與漁光島，不論你喜歡站在山巔俯瞰天地、或想在海邊看第一道金光染亮海面，都能找到屬於自己的日出儀式。</p>
+                <a href="https://reurl.cc/5bVWgV" class="btn btn-primary">查看詳情</a>
+              </div>
+            </div>
+  
+  
+  
+              
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-info text-white">
+
+
+          <div class="card" style="width: 18rem;">
+            <img src="images/kill.jpg" class="card-img-top" alt="photo miss">
+            <div class="card-body">
+              <h5 class="card-title">新北割頸案判決惹議</h5>
+              <p class="card-text">前（2023）年發生於新北市的校園割頸案受到社會高度關注，就讀國三的郭姓少年為替林姓乾妹出氣，竟持彈簧刀刺殺同校楊姓國三生，案件經過近2年的審理，高院（台灣高等法院）二審加重對郭男、林女的刑度，分別判處12年、11年有期徒刑。楊父不滿表示，曾有法官當庭詢問「讓兇嫌孝順被害人父母」，對此高院則於26日緊急發聲。</p>
+              <a href="https://reurl.cc/Vm7O3Y" class="btn btn-primary">查看詳情</a>
             </div>
           </div>
 
             
           </div>
-          <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-secondary text-white">
-
-          <div class="card" style="width: 18rem;">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1PQ5Um.img?w=690&h=388&m=6" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">共軍曝渡海作戰弱點?他：台灣這武器買對了</h5>
-              <p class="card-text">張景森指出，外界多將焦點放在海馬斯的射程，認為能對對岸進行源頭打擊，但他認為「這反而不是關鍵」。他強調，海馬斯真正的價值不在於火力大小，而是作戰方式完全不同於傳統武器，海馬斯具備高度機動性，一般卡車可通行之處皆能部署，能分散配置、快速轉移，5分鐘內打完就跑，讓對手很難被鎖定、很難被清除。</p>
-
-
-              <a href="https://www.msn.com/zh-tw/news/national/%E5%85%B1%E8%BB%8D%E6%9B%9D%E6%B8%A1%E6%B5%B7%E4%BD%9C%E6%88%B0%E5%BC%B1%E9%BB%9E-%E4%BB%96-%E5%8F%B0%E7%81%A3%E9%80%99%E6%AD%A6%E5%99%A8%E8%B2%B7%E5%B0%8D%E4%BA%86/ar-AA1TfO2s?ocid=hpmsn&cvid=8a7ee428000d4f4f8a2a725b5e7c9440&ei=4" class="btn btn-primary">點擊展開</a>
-            </div>
-          </div>
-
-
-
-            
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-success text-white">
-
-
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">中製系統侵官署2／中製機芯貼牌台廠商標 無良廠商靠一招瞞天過海「沒人管」</h5>
-              <p class="card-text">工程師告訴本刊，研勤科技聲稱採用聯發科的解決方案，照理主機板不會打印ZYSJ字樣，印上ZYSJ就代表是眾雲世紀科技的設計產權。「很有可能是直接買中國生產的主機板！」3位工程師說，研勤應該是為節省成本，所以採購中國主機板，再套裝台灣品牌外盒，這種借屍還魂的手法相當常見。</p> 
->點擊展開</a>
           <div class="col-12 col-md-6 col-lg-3 p-3 mb-2 bg-warning text-white">
 
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="images/dkp.jpg" class="card-img-top" alt="photo miss">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-              <a href="#" class="btn btn-primary">點擊展開</a>
-          
-  
+              <h5 class="card-title">解析4罪名：判刑恐落在這區間</h5>
+              <p class="card-text">台北地方法院審理民眾黨前主席柯文哲涉入京華城容積率弊案，24日全案言詞辯論終結。檢方指出，柯文哲在庭上言行不當，並放任支持者包圍地檢署，且透過社群圖卡方式扭曲證人證詞，認定其無視法治、犯後態度不佳，因此建請法院判處有期徒刑28年6月。對此，長期關注相關案件的精神科醫師沈政男今（25日）發文表示，依其觀察與分析，預測柯文哲即便遭判刑，刑期也將落在10年以下。</p>
+              <a href="https://reurl.cc/2lNGD6" class="btn btn-primary">查看詳情</a>
+            </div>
+          </div>
+
+            
+          </div>
+      </div>
+  </div>  
   </body>
 </html>
